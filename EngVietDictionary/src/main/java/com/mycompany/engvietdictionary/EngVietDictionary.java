@@ -16,33 +16,28 @@ public class EngVietDictionary {
     public static void main(String[] args) {
         HashMap<String, String> dictionary = new HashMap<>();
         Input(dictionary);
-        int menu = 1;
-        while (menu != 0) {
-            System.out.println("Enter the word: ");
-            String a = sc.next();
-            if (CheckExist(dictionary, a)) {
-                String meaning = FindMeaning(dictionary, a);
-                System.out.print(meaning);
-            } else {
-                System.out.print(a + " does not exist in the dictionary");
-            }
-            System.out.println("Do you want to search words?");
-            menu = sc.nextInt();
+        System.out.println("Enter the word: ");
+        String a = sc.next();
+        if (CheckExist(dictionary, a)) {
+            String meaning = FindMeaning(dictionary, a);
+            System.out.print(meaning);
+        } else {
+            System.out.print(a + " does not exist in the dictionary");
         }
 
     }
 
     public static void Input(HashMap<String, String> dictionary) {
-        dictionary.put("key", "từ khóa");
-        dictionary.put("book", "sách");
-        dictionary.put("school", "trường học");
-        dictionary.put("computer", "máy tính");
-        dictionary.put("class", "lớp");
-        dictionary.put("keyboard", "bàn phím");
-        dictionary.put("study", "học");
-        dictionary.put("graduate", "tốt nghiệp");
-        dictionary.put("action", "hành động");
-        dictionary.put("uniform", "đồng phục");
+        dictionary.put("key", "chia khoa");
+        dictionary.put("book", "sach");
+        dictionary.put("school", "truong hoc");
+        dictionary.put("computer", "may tinh");
+        dictionary.put("class", "lop");
+        dictionary.put("keyboard", "ban phim");
+        dictionary.put("study", "hoc");
+        dictionary.put("graduate", "tot nghiep");
+        dictionary.put("action", "hanh dong");
+        dictionary.put("uniform", "đong phuc");
 
     }
 
